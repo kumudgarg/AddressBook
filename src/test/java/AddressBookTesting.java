@@ -31,6 +31,17 @@ public class AddressBookTesting {
         }
 
     }
+
+    @Test
+    public void WhenReadPersonDetails_ItShouldReadPersonDetailsFromJson(){
+        AddressBookManager addressBookManager = new AddressBookManager();
+        try {
+            Assert.assertEquals(true,addressBookManager.readPersonInfo("bridgelabAddress.json"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
 
 

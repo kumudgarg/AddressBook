@@ -3,10 +3,9 @@ package com.bridgelab.addressbook.service;
 import com.bridgelab.addressbook.model.PersonDetails;
 import com.google.gson.Gson;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class AddressBookManager implements AddressBook {
 
@@ -56,4 +55,19 @@ public class AddressBookManager implements AddressBook {
         }
         return false;
     }
+
+    @Override
+    public boolean readPersonInfo(String fileName) throws FileNotFoundException {
+        File file = new File("/home/admin105/Desktop/addressBook/src/main/java/com/bridgelab/addressbook/json/" + fileName);
+        if (file.exists()) {
+            Gson gson = new Gson();
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            PersonDetails[] personDetails = gson.fromJson(br,PersonDetails[].class);
+            System.out.println(Arrays.toString(personDetails));
+            return true;
+        }
+        return false;
+    }
+
+
 }
