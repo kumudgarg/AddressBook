@@ -13,6 +13,11 @@ public class AddressBookTesting {
         Assert.assertEquals(false,addressBookManager.createFile("David'sAddress.json"));
     }
 
+    @Test
+    public void WhenAddPersonDetails_ShouldReturnPersonDetails(){
+    AddressBookManager addressBookManager = new AddressBookManager();
+    Assert.assertEquals("9468679750",addressBookManager.addPersonDetails("kumud","garg","vashi","mumbai","Mahratra","124536","9468679750").getPhoneNumber());
 
+    }
 }
 

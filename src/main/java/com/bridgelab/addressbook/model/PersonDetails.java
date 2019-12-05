@@ -7,14 +7,14 @@ public class PersonDetails {
     private String Address;
     private String City;
     private String State;
-    private long Zip;
-    private long PhoneNumber ;
+    private String Zip;
+    private String PhoneNumber ;
 
     public PersonDetails() {
 
     }
 
-    public PersonDetails(String firstName, String lastName, String address, String city, String state, long zip, long phoneNumber) {
+    public PersonDetails(String firstName, String lastName, String address, String city, String state, String zip, String phoneNumber) {
         FirstName = firstName;
         LastName = lastName;
         Address = address;
@@ -44,11 +44,11 @@ public class PersonDetails {
         return State;
     }
 
-    public long getZip() {
+    public String getZip() {
         return Zip;
     }
 
-    public long getPhoneNumber() {
+    public String getPhoneNumber() {
         return PhoneNumber;
     }
 
@@ -72,11 +72,11 @@ public class PersonDetails {
         State = state;
     }
 
-    public void setZip(long zip) {
+    public void setZip(String zip) {
         Zip = zip;
     }
 
-    public void setPhoneNumber(long phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         PhoneNumber = phoneNumber;
     }
 
