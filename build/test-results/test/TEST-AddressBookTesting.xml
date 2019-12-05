@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AddressBookTesting" tests="1" skipped="0" failures="1" errors="0" timestamp="2019-12-05T05:05:09" hostname="admin105-desktop" time="0.42">
+<testsuite name="AddressBookTesting" tests="1" skipped="0" failures="1" errors="0" timestamp="2019-12-05T06:59:30" hostname="admin105-desktop" time="0.01">
   <properties/>
-  <testcase name="WhenGivenFileName_IfNotExist_ShouldReturnFalse" classname="AddressBookTesting" time="0.42">
-    <failure message="java.lang.AssertionError: expected:&lt;false&gt; but was:&lt;true&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;false&gt; but was:&lt;true&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at AddressBookTesting.WhenGivenFileName_IfNotExist_ShouldReturnFalse(AddressBookTesting.java:10)
+  <testcase name="WhenGivenPersonDetalis_shouldReturnDeatilsProperAdd" classname="AddressBookTesting" time="0.01">
+    <failure message="java.util.NoSuchElementException: No line found" type="java.util.NoSuchElementException">java.util.NoSuchElementException: No line found
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1651)
+	at com.bridgelab.addressbook.service.AddressBookManager.addPersonDetails(AddressBookManager.java:43)
+	at AddressBookTesting.WhenGivenPersonDetalis_shouldReturnDeatilsProperAdd(AddressBookTesting.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -57,6 +55,7 @@
 	at java.base/java.lang.Thread.run(Thread.java:834)
 </failure>
   </testcase>
-  <system-out><![CDATA[]]></system-out>
+  <system-out><![CDATA[enter first name
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
