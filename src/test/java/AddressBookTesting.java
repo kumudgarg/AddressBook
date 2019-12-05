@@ -3,6 +3,7 @@ import com.bridgelab.addressbook.service.AddressBookManager;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class AddressBookTesting {
@@ -15,9 +16,21 @@ public class AddressBookTesting {
 
     @Test
     public void WhenAddPersonDetails_ShouldReturnPersonDetails(){
-    AddressBookManager addressBookManager = new AddressBookManager();
-    Assert.assertEquals("9468679750",addressBookManager.addPersonDetails("kumud","garg","vashi","mumbai","Mahratra","124536","9468679750").getPhoneNumber());
+        AddressBookManager addressBookManager = new AddressBookManager();
+        Assert.assertEquals("9468679750",addressBookManager.addPersonDetails("kumud","garg","vashi","mumbai","Mahratra","124536","9468679750").getPhoneNumber());
+    }
+
+    @Test
+    public void WhenSavePersonDetails_ItShouldWriteIntoJson(){
+        AddressBookManager addressBookManager = new AddressBookManager();
+        addressBookManager.addPersonDetails("kumud","garg","vashi","mumbai","Mahratra","124536","9468679750");
+        try {
+            Assert.assertEquals(true,addressBookManager.save("bridgelabAddress.json"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 }
+
 
