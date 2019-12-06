@@ -63,8 +63,6 @@ public class AddressBookManager implements AddressBook {
             for (int i = 0; i < personDetails.length; i++) {
                 personInfo.add(personDetails[i]);
             }
-
-            //System.out.println(Arrays.toString(personDetails));
             return personInfo;
         }
         return null;

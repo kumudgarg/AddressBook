@@ -223,7 +223,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/bridgelab/addressbook/service/AddressBookManager.java</url>
-          <line>73</line>
+          <line>71</line>
           <properties class="com.bridgelab.addressbook.service.AddressBookManager" method="editPersonDetails">
             <option name="EMULATED" value="true" />
           </properties>
