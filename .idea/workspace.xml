@@ -12,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/bridgelab/addressbook/service/AddressBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/bridgelab/addressbook/service/AddressBook.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/bridgelab/addressbook/service/AddressBookManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/bridgelab/addressbook/service/AddressBookManager.class" afterDir="false" />
@@ -23,6 +24,7 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelab/addressbook/json/bridgelabAddress.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelab/addressbook/json/bridgelabAddress.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelab/addressbook/service/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelab/addressbook/service/AddressBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelab/addressbook/service/AddressBookManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelab/addressbook/service/AddressBookManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/AddressBookTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AddressBookTesting.java" afterDir="false" />
@@ -79,26 +81,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.AddressBookTesting.WhenReadPersonDetails_ItShouldReadPersonDetailsFromJson">
-    <configuration name="AddressApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bridgelab.main.AddressApp" />
-      <module name="addressBook.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bridgelab.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddressBookTesting.WhenGivenFileName_IfNotExist_ShouldReturnFalse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.AddressBookTesting.WhenEditPersonDetails_ShouldReturnUpdatedDetails">
+    <configuration name="AddressBookTesting" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;AddressBookTesting.WhenGivenFileName_IfNotExist_ShouldReturnFalse&quot;" />
+        <option name="scriptParameters" value="--tests &quot;AddressBookTesting&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -113,12 +102,32 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AddressBookTesting.WhenGivenPersonDetalis_shouldReturnDeatilsProperAdd" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AddressBookTesting.WhenAddPersonDetails_ShouldReturnPersonDetails" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;AddressBookTesting.WhenGivenPersonDetalis_shouldReturnDeatilsProperAdd&quot;" />
+        <option name="scriptParameters" value="--tests &quot;AddressBookTesting.WhenAddPersonDetails_ShouldReturnPersonDetails&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="AddressBookTesting.WhenEditPersonDetails_ShouldReturnUpdatedDetails" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;AddressBookTesting.WhenEditPersonDetails_ShouldReturnUpdatedDetails&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -175,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.AddressBookTesting.WhenReadPersonDetails_ItShouldReadPersonDetailsFromJson" />
+        <item itemvalue="Gradle.AddressBookTesting.WhenEditPersonDetails_ShouldReturnUpdatedDetails" />
         <item itemvalue="Gradle.AddressBookTesting.WhenSavePersonDetails_ItShouldWriteIntoJson" />
-        <item itemvalue="Gradle.AddressBookTesting.WhenGivenPersonDetalis_shouldReturnDeatilsProperAdd" />
-        <item itemvalue="Gradle.AddressBookTesting.WhenGivenFileName_IfNotExist_ShouldReturnFalse" />
-        <item itemvalue="Application.AddressApp" />
+        <item itemvalue="Gradle.AddressBookTesting.WhenAddPersonDetails_ShouldReturnPersonDetails" />
+        <item itemvalue="Gradle.AddressBookTesting" />
+        <item itemvalue="Gradle.AddressBookTesting.WhenReadPersonDetails_ItShouldReadPersonDetailsFromJson" />
       </list>
     </recent_temporary>
   </component>
@@ -201,10 +210,55 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bridgelab/addressbook/service/AddressBookManager.java</url>
+          <line>73</line>
+          <properties class="com.bridgelab.addressbook.service.AddressBookManager" method="editPersonDetails">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/AddressBookTesting.java</url>
+          <line>55</line>
+          <properties class="AddressBookTesting" method="WhenEditPersonDetails_ShouldReturnUpdatedDetails">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bridgelab/addressbook/service/AddressBookManager.java</url>
+          <line>40</line>
+          <properties class="com.bridgelab.addressbook.service.AddressBookManager" method="save">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/AddressBookTesting.java</url>
+          <line>26</line>
+          <properties class="AddressBookTesting" method="WhenSavePersonDetails_ItShouldWriteIntoJson">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/AddressBookTesting.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

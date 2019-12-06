@@ -6,11 +6,14 @@ import com.google.gson.Gson;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
 
 public class AddressBookManager implements AddressBook {
 
-    ArrayList<PersonDetails> personInfo = new ArrayList<PersonDetails>();
+    public ArrayList<PersonDetails> personInfo = new ArrayList<PersonDetails>();
 
+    public static final String path = "/home/admin105/Desktop/addressBook/src/main/java/com/bridgelab/addressbook/json/bridgelabAddress.json";
 
     @Override
     public boolean createFile(String fileName) {
@@ -28,26 +31,20 @@ public class AddressBookManager implements AddressBook {
     }
 
     @Override
-    public PersonDetails addPersonDetails(String firstName, String lastName, String address, String city, String state, String zip, String phoneNumber) {
-        PersonDetails personDetails = new PersonDetails();
-        personDetails.setFirstName(firstName);
-        personDetails.setLastName(lastName);
-        personDetails.setAddress(address);
-        personDetails.setCity(city);
-        personDetails.setState(state);
-        personDetails.setZip(zip);
-        personDetails.setPhoneNumber(phoneNumber);
+    public ArrayList<PersonDetails> addPersonDetails(PersonDetails personDetails) {
         personInfo.add(personDetails);
-        return personDetails;
+        return personInfo;
 
     }
 
     @Override
-    public boolean save(String fileName) throws IOException {
+    public boolean save(String fileName, List<PersonDetails> personDetails) throws IOException {
         File file = new File("/home/admin105/Desktop/addressBook/src/main/java/com/bridgelab/addressbook/json/" + fileName);
         if (file.exists()) {
             Gson gson = new Gson();
-            String json = gson.toJson(personInfo);
+           readPersonInfo(fileName);
+            //personInfo.add(personDetails);
+            String json = gson.toJson(personDetails);
             FileWriter writer = new FileWriter("/home/admin105/Desktop/addressBook/src/main/java/com/bridgelab/addressbook/json/" + fileName);
             writer.write(json);
             writer.close();
@@ -57,17 +54,47 @@ public class AddressBookManager implements AddressBook {
     }
 
     @Override
-    public boolean readPersonInfo(String fileName) throws FileNotFoundException {
+    public List<PersonDetails> readPersonInfo(String fileName) throws FileNotFoundException {
         File file = new File("/home/admin105/Desktop/addressBook/src/main/java/com/bridgelab/addressbook/json/" + fileName);
         if (file.exists()) {
             Gson gson = new Gson();
             BufferedReader br = new BufferedReader(new FileReader(file));
-            PersonDetails[] personDetails = gson.fromJson(br,PersonDetails[].class);
-            System.out.println(Arrays.toString(personDetails));
-            return true;
+            PersonDetails[] personDetails = gson.fromJson(br, PersonDetails[].class);
+            for (int i = 0; i < personDetails.length; i++) {
+                personInfo.add(personDetails[i]);
+            }
+
+            //System.out.println(Arrays.toString(personDetails));
+            return personInfo;
         }
-        return false;
+        return null;
     }
 
+    @Override
+    public boolean editPersonDetails(String phoneNumber, String fileName, PersonDetails personDetails) throws IOException {
+        List<PersonDetails> personList = readPersonInfo(fileName);
+        File file = new File("/home/admin105/Desktop/addressBook/src/main/java/com/bridgelab/addressbook/json/" + fileName);
+        for (PersonDetails person : personList) {
+
+            if (person.getPhoneNumber().equals(phoneNumber)) {
+                person.setFirstName(personDetails.getFirstName());
+                person.setLastName(personDetails.getLastName());
+                person.setAddress(personDetails.getAddress());
+                person.setCity(personDetails.getCity());
+                person.setState(personDetails.getState());
+                person.setZip(personDetails.getZip());
+                person.setPhoneNumber(personDetails.getPhoneNumber());
+                Gson gson = new Gson();
+                String json = gson.toJson(personList);
+                FileWriter writer = new FileWriter(file);
+                writer.write(json);
+                writer.close();
+                return true;
+            }
+
+        }
+        return false;
+
+    }
 
 }

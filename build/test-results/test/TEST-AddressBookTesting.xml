@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AddressBookTesting" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-05T11:06:45" hostname="admin105-desktop" time="0.052">
+<testsuite name="AddressBookTesting" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T12:27:16" hostname="admin105-desktop" time="0.052">
   <properties/>
-  <testcase name="WhenReadPersonDetails_ItShouldReadPersonDetailsFromJson" classname="AddressBookTesting" time="0.052"/>
-  <system-out><![CDATA[[PersonDetails{FirstName='kumud', LastName='garg', Address='vashi', City='mumbai', State='Mahratra', Zip=124536, PhoneNumber=9468679750}]
-]]></system-out>
+  <testcase name="WhenEditPersonDetails_ShouldReturnUpdatedDetails" classname="AddressBookTesting" time="0.052"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
