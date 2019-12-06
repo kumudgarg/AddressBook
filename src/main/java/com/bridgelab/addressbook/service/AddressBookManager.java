@@ -42,7 +42,7 @@ public class AddressBookManager implements AddressBook {
         File file = new File("/home/admin105/Desktop/addressBook/src/main/java/com/bridgelab/addressbook/json/" + fileName);
         if (file.exists()) {
             Gson gson = new Gson();
-           readPersonInfo(fileName);
+            readPersonInfo(fileName);
             //personInfo.add(personDetails);
             String json = gson.toJson(personDetails);
             FileWriter writer = new FileWriter("/home/admin105/Desktop/addressBook/src/main/java/com/bridgelab/addressbook/json/" + fileName);
@@ -95,4 +95,31 @@ public class AddressBookManager implements AddressBook {
 
     }
 
+    @Override
+    public boolean deletePersonDetails(String fileName, String phoneNumber) {
+        try {
+            File file = new File("/home/admin105/Desktop/addressBook/src/main/java/com/bridgelab/addressbook/json/" + fileName);
+            List<PersonDetails> personDetailsList = readPersonInfo(fileName);
+            for (PersonDetails personDetails1: personDetailsList) {
+                if (personDetails1.getPhoneNumber().equals(phoneNumber)) {
+                    personDetailsList.remove(personDetails1);
+                    Gson gson = new Gson();
+                    String json = gson.toJson(personDetailsList);
+                    FileWriter writer = new FileWriter(file);
+                    writer.write(json);
+                    writer.close();
+                    return true;
+                }
+
+            }
+
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+
+    }
 }

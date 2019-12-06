@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AddressBookTesting" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T12:27:16" hostname="admin105-desktop" time="0.052">
+<testsuite name="AddressBookTesting" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T13:17:23" hostname="admin105-desktop" time="0.054">
   <properties/>
-  <testcase name="WhenEditPersonDetails_ShouldReturnUpdatedDetails" classname="AddressBookTesting" time="0.052"/>
+  <testcase name="WhenDeletedPersonDetails_ShouldReturnTrue" classname="AddressBookTesting" time="0.054"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

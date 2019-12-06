@@ -58,6 +58,12 @@ public class AddressBookTesting {
         PersonDetails personDetails = new PersonDetails("rajat", "Garg", "jaipur", "jaipur", "Mahratra", "124536", "9468679750");
         Assert.assertEquals(true, addressBookManager.editPersonDetails("9468679750", "bridgelabAddress.json", personDetails));
     }
+
+    @Test
+    public void WhenDeletedPersonDetails_ShouldReturnTrue() {
+        AddressBookManager addressBookManager = new AddressBookManager();
+        Assert.assertEquals(true,addressBookManager.deletePersonDetails("bridgelabAddress.json","9468679750"));
+    }
 }
 
 

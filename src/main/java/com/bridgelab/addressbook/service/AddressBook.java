@@ -13,4 +13,5 @@ public interface AddressBook {
     public boolean save(String fileName,List<PersonDetails> personDetails) throws IOException;
     public List<PersonDetails> readPersonInfo(String fileName) throws FileNotFoundException;
     public boolean editPersonDetails(String phoneNumber,String fieldName,PersonDetails personDetails) throws IOException;
+    public boolean deletePersonDetails(String fileName,String phoneNumber);
 }
